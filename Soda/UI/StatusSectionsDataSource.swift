@@ -22,6 +22,7 @@ extension StatusSectionsDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as StatusSectionCell
+        
         return cell
     }
     

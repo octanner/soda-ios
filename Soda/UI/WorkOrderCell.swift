@@ -25,9 +25,14 @@ class WorkOrderCell: UICollectionViewCell, ReusableView {
     func config(with workOrder: WorkOrder) {
         orderNumberLabel.text = "\(workOrder.workOrderNumber)"
         dueDateLabel.text = workOrder.dueDate.date()?.monthDayYearString()
-        dueDateLabel.textColor = workOrder.workOrderType.name.color
+        coloredView.backgroundColor = workOrder.workOrderType.name.color
         customerNameLabel.text = workOrder.customerName
         locationLabel.text = workOrder.location
+        if let dueDate = workOrder.dueDate.date() {
+            dueDateLabel.textColor = dueDate.daysUntilColor()
+        } else {
+            dueDateLabel.textColor = .darkText
+        }
     }
     
 }

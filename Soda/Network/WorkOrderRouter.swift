@@ -17,19 +17,18 @@ extension Router {
     
     enum WorkOrder: URLRequestConvertible {
         // Fetches all work orders
-        case getAllWorkOrders
+        case getWorkOrders(Bool, Int?)
         
         var method: HTTPMethod {
             switch self {
-            case .getAllWorkOrders:
+            case .getWorkOrders:
                 return .get
             }
         }
         
         var path: String {
             switch self {
-            // /v1/feedback-requests
-            case .getAllWorkOrders:
+            case .getWorkOrders:
                 return "/v1/work_orders"
                 
             }
@@ -42,8 +41,17 @@ extension Router {
             urlRequest.httpMethod = method.rawValue
             
             switch self {
-            case .getAllWorkOrders:
-                break
+            case let .getWorkOrders(active, userId):
+                var params = Parameters()
+                if active  {
+                    params[Keys.active] = active
+                }
+                if let userId = userId {
+                    params[Keys.userId] = userId
+                }
+                if !params.isEmpty {
+                    urlRequest = try JSONEncoding.default.encode(urlRequest, with: params)
+                }
             }
             return urlRequest
         }

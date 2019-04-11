@@ -17,6 +17,10 @@ extension UIColor {
     class var signature: UIColor { return #colorLiteral(red: 0.9490196078, green: 0.6, blue: 0.2901960784, alpha: 1) }
     class var stockSignature: UIColor { return #colorLiteral(red: 0.9490196078, green: 0.7882352941, blue: 0.2980392157, alpha: 1) }
     
+    class var danger: UIColor { return #colorLiteral(red: 0.8431372549, green: 0.05490196078, blue: 0.0862745098, alpha: 1) }
+    class var warning: UIColor { return #colorLiteral(red: 0.7843137255, green: 0.5058823529, blue: 0.2549019608, alpha: 1) }
+    class var safe: UIColor { return #colorLiteral(red: 0.05882352941, green: 0.4901960784, blue: 0.3215686275, alpha: 1) }
+    
     class var darkText: UIColor { return #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1294117647, alpha: 1) }
     class var lightText: UIColor { return #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1) }
     
@@ -29,3 +33,4 @@ extension UIColor {
     class var blackOne: UIColor { return #colorLiteral(red: 0.1294117647, green: 0.1294117647, blue: 0.1294117647, alpha: 1) }
     
 }
+

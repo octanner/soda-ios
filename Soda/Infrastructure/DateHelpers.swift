@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     
@@ -22,6 +23,17 @@ extension Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM dd, yyyy"
         return formatter.string(from: self)
+    }
+    
+    func daysUntilColor() -> UIColor {
+        let timeRemainingInterval = abs(self.timeIntervalSinceNow)
+        if timeRemainingInterval < 2.days {
+            return .danger
+        } else if timeRemainingInterval < 5.days {
+            return .warning
+        } else {
+            return .safe
+        }
     }
     
 }
@@ -59,4 +71,31 @@ public extension Date {
         }
         return .none
     }
+}
+
+
+// MARK: - Time intervals on Int
+
+public extension Int {
+    
+    var seconds: TimeInterval {
+        return TimeInterval(self)
+    }
+    
+    var minutes: TimeInterval {
+        return TimeInterval(self * 60)
+    }
+    
+    var hours: TimeInterval {
+        return TimeInterval(minutes * 60)
+    }
+    
+    var days: TimeInterval {
+        return TimeInterval(hours * 24)
+    }
+    
+    var weeks: TimeInterval {
+        return TimeInterval(days * 7)
+    }
+    
 }
