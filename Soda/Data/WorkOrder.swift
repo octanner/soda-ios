@@ -7,30 +7,10 @@
 //
 
 import Foundation
-
 import UIKit
-
-
 
 struct WorkOrder: Codable {
     
-    struct Status: Codable {
-        let id: Int
-        let name: Name
-        
-        enum Name: String, Codable {
-            case estimate = "Estimate/Customer Approval"
-            case toBeOrdered = "Items To Be Ordered"
-            case design = "CAD/Desgin"
-            case casting = "Casting"
-            case assembly = "Assembly/Setting"
-            case receiving = "Receiving/Appraisal"
-            case customerService = "Customer Service/Pickup"
-            case sold = "Sold"
-            case closed = "Closed"
-        }
-        
-    }
     
     let id: Int
     let workOrderNumber: Int

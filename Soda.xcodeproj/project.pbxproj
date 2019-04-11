@@ -11,6 +11,14 @@
 		EE03D084225F9166002B914B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03D083225F9166002B914B /* User.swift */; };
 		EE03D086225F958A002B914B /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03D085225F958A002B914B /* WorkOrder.swift */; };
 		EE03D088225F9DC1002B914B /* WorkOrderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03D087225F9DC1002B914B /* WorkOrderRouter.swift */; };
+		EE7CF12C225FB1D300F6BCC7 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF12B225FB1D300F6BCC7 /* Status.swift */; };
+		EE7CF12F225FB42800F6BCC7 /* WorkOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF12D225FB42800F6BCC7 /* WorkOrderCell.swift */; };
+		EE7CF130225FB42800F6BCC7 /* WorkOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE7CF12E225FB42800F6BCC7 /* WorkOrderCell.xib */; };
+		EE7CF133225FB45900F6BCC7 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF132225FB45900F6BCC7 /* UITableView+Extensions.swift */; };
+		EE7CF135225FB47600F6BCC7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF134225FB47600F6BCC7 /* ReusableView.swift */; };
+		EE7CF137225FB57D00F6BCC7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF136225FB57D00F6BCC7 /* UIColor+Extensions.swift */; };
+		EE7CF13A225FBBE000F6BCC7 /* StatusSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF138225FBBE000F6BCC7 /* StatusSectionCell.swift */; };
+		EE7CF13B225FBBE000F6BCC7 /* StatusSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE7CF139225FBBE000F6BCC7 /* StatusSectionCell.xib */; };
 		EEE027ED222EF6D8006E22CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE027EC222EF6D8006E22CC /* AppDelegate.swift */; };
 		EEE027F2222EF6D8006E22CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F0222EF6D8006E22CC /* Main.storyboard */; };
 		EEE027F4222EF6D9006E22CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F3222EF6D9006E22CC /* Assets.xcassets */; };
@@ -26,6 +34,14 @@
 		EE03D083225F9166002B914B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EE03D085225F958A002B914B /* WorkOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
 		EE03D087225F9DC1002B914B /* WorkOrderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderRouter.swift; sourceTree = "<group>"; };
+		EE7CF12B225FB1D300F6BCC7 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		EE7CF12D225FB42800F6BCC7 /* WorkOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderCell.swift; sourceTree = "<group>"; };
+		EE7CF12E225FB42800F6BCC7 /* WorkOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkOrderCell.xib; sourceTree = "<group>"; };
+		EE7CF132225FB45900F6BCC7 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		EE7CF134225FB47600F6BCC7 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		EE7CF136225FB57D00F6BCC7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		EE7CF138225FBBE000F6BCC7 /* StatusSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSectionCell.swift; sourceTree = "<group>"; };
+		EE7CF139225FBBE000F6BCC7 /* StatusSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusSectionCell.xib; sourceTree = "<group>"; };
 		EEE027E9222EF6D8006E22CC /* Soda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE027EC222EF6D8006E22CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE027F1222EF6D8006E22CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +86,7 @@
 			children = (
 				EE03D083225F9166002B914B /* User.swift */,
 				EE03D085225F958A002B914B /* WorkOrder.swift */,
+				EE7CF12B225FB1D300F6BCC7 /* Status.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -88,8 +105,22 @@
 				EEE027F0222EF6D8006E22CC /* Main.storyboard */,
 				EEE027FE222EF7B2006E22CC /* WorkOrdersViewController.swift */,
 				EEE02801222EFB63006E22CC /* WorkOrderDetailViewController.swift */,
+				EE7CF12D225FB42800F6BCC7 /* WorkOrderCell.swift */,
+				EE7CF12E225FB42800F6BCC7 /* WorkOrderCell.xib */,
+				EE7CF138225FBBE000F6BCC7 /* StatusSectionCell.swift */,
+				EE7CF139225FBBE000F6BCC7 /* StatusSectionCell.xib */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		EE7CF131225FB44200F6BCC7 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				EE7CF132225FB45900F6BCC7 /* UITableView+Extensions.swift */,
+				EE7CF134225FB47600F6BCC7 /* ReusableView.swift */,
+				EE7CF136225FB57D00F6BCC7 /* UIColor+Extensions.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		EEE027E0222EF6D8006E22CC = {
@@ -116,6 +147,7 @@
 				EEE027EC222EF6D8006E22CC /* AppDelegate.swift */,
 				EE03D08B225FA2B3002B914B /* UI */,
 				EE03D089225FA29A002B914B /* Data */,
+				EE7CF131225FB44200F6BCC7 /* Infrastructure */,
 				EE03D08A225FA2A3002B914B /* Network */,
 				EEE027F3222EF6D9006E22CC /* Assets.xcassets */,
 				EEE027F5222EF6D9006E22CC /* LaunchScreen.storyboard */,
@@ -185,6 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE027F7222EF6D9006E22CC /* LaunchScreen.storyboard in Resources */,
+				EE7CF130225FB42800F6BCC7 /* WorkOrderCell.xib in Resources */,
+				EE7CF13B225FBBE000F6BCC7 /* StatusSectionCell.xib in Resources */,
 				EEE027F4222EF6D9006E22CC /* Assets.xcassets in Resources */,
 				EEE027F2222EF6D8006E22CC /* Main.storyboard in Resources */,
 			);
@@ -244,10 +278,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7CF133225FB45900F6BCC7 /* UITableView+Extensions.swift in Sources */,
+				EE7CF135225FB47600F6BCC7 /* ReusableView.swift in Sources */,
 				EE03D086225F958A002B914B /* WorkOrder.swift in Sources */,
+				EE7CF13A225FBBE000F6BCC7 /* StatusSectionCell.swift in Sources */,
 				EE03D088225F9DC1002B914B /* WorkOrderRouter.swift in Sources */,
+				EE7CF12C225FB1D300F6BCC7 /* Status.swift in Sources */,
 				EE03D084225F9166002B914B /* User.swift in Sources */,
 				EEE027FF222EF7B2006E22CC /* WorkOrdersViewController.swift in Sources */,
+				EE7CF12F225FB42800F6BCC7 /* WorkOrderCell.swift in Sources */,
+				EE7CF137225FB57D00F6BCC7 /* UIColor+Extensions.swift in Sources */,
 				EEE027ED222EF6D8006E22CC /* AppDelegate.swift in Sources */,
 				EEE02802222EFB63006E22CC /* WorkOrderDetailViewController.swift in Sources */,
 			);
