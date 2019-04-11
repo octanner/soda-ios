@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-struct WorkOrder: Codable {
-    
+struct WorkOrder {
     
     let id: Int
     let workOrderNumber: Int
@@ -22,7 +21,11 @@ struct WorkOrder: Codable {
     let status: Status
     let assignedUser: User
     let salesUser: User
-    let workOrderType: String
+    let workOrderType: WorkOrderType
+    
+}
+
+extension WorkOrder: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -50,7 +53,7 @@ struct WorkOrder: Codable {
         status = try values.decode(Status.self, forKey: .status)
         assignedUser = try values.decode(User.self, forKey: .assignedUser)
         salesUser = try values.decode(User.self, forKey: .salesUser)
-        workOrderType = try values.decode(String.self, forKey: .workOrderType)
+        workOrderType = try values.decode(WorkOrderType.self, forKey: .workOrderType)
     }
     
 }

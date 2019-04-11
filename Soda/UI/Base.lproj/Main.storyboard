@@ -37,6 +37,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ths-sE-hYC" id="IPA-Ja-HMZ"/>
+                                    <outlet property="delegate" destination="BFr-5D-Ina" id="Bxo-iD-n8b"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,6 +54,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeA-Zb-4qL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Ths-sE-hYC" customClass="StatusSectionsDataSource" customModule="Soda" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-110.05025125628141" y="444.60431654676262"/>
         </scene>

@@ -9,6 +9,7 @@
 import Foundation
 
 struct Status: Codable {
+   
     let id: Int
     let name: Name
     

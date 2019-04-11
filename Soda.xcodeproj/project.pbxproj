@@ -19,6 +19,9 @@
 		EE7CF137225FB57D00F6BCC7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF136225FB57D00F6BCC7 /* UIColor+Extensions.swift */; };
 		EE7CF13A225FBBE000F6BCC7 /* StatusSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF138225FBBE000F6BCC7 /* StatusSectionCell.swift */; };
 		EE7CF13B225FBBE000F6BCC7 /* StatusSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE7CF139225FBBE000F6BCC7 /* StatusSectionCell.xib */; };
+		EE7CF13D225FCEED00F6BCC7 /* WorkOrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF13C225FCEED00F6BCC7 /* WorkOrderType.swift */; };
+		EE7CF13F225FD01F00F6BCC7 /* StatusSectionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF13E225FD01F00F6BCC7 /* StatusSectionsDataSource.swift */; };
+		EE7CF141225FD2EA00F6BCC7 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF140225FD2EA00F6BCC7 /* DateHelpers.swift */; };
 		EEE027ED222EF6D8006E22CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE027EC222EF6D8006E22CC /* AppDelegate.swift */; };
 		EEE027F2222EF6D8006E22CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F0222EF6D8006E22CC /* Main.storyboard */; };
 		EEE027F4222EF6D9006E22CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F3222EF6D9006E22CC /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		EE7CF136225FB57D00F6BCC7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		EE7CF138225FBBE000F6BCC7 /* StatusSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSectionCell.swift; sourceTree = "<group>"; };
 		EE7CF139225FBBE000F6BCC7 /* StatusSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusSectionCell.xib; sourceTree = "<group>"; };
+		EE7CF13C225FCEED00F6BCC7 /* WorkOrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderType.swift; sourceTree = "<group>"; };
+		EE7CF13E225FD01F00F6BCC7 /* StatusSectionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSectionsDataSource.swift; sourceTree = "<group>"; };
+		EE7CF140225FD2EA00F6BCC7 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
 		EEE027E9222EF6D8006E22CC /* Soda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE027EC222EF6D8006E22CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE027F1222EF6D8006E22CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			children = (
 				EE03D083225F9166002B914B /* User.swift */,
 				EE03D085225F958A002B914B /* WorkOrder.swift */,
+				EE7CF13C225FCEED00F6BCC7 /* WorkOrderType.swift */,
 				EE7CF12B225FB1D300F6BCC7 /* Status.swift */,
 			);
 			path = Data;
@@ -104,11 +111,12 @@
 			children = (
 				EEE027F0222EF6D8006E22CC /* Main.storyboard */,
 				EEE027FE222EF7B2006E22CC /* WorkOrdersViewController.swift */,
-				EEE02801222EFB63006E22CC /* WorkOrderDetailViewController.swift */,
-				EE7CF12D225FB42800F6BCC7 /* WorkOrderCell.swift */,
-				EE7CF12E225FB42800F6BCC7 /* WorkOrderCell.xib */,
+				EE7CF13E225FD01F00F6BCC7 /* StatusSectionsDataSource.swift */,
 				EE7CF138225FBBE000F6BCC7 /* StatusSectionCell.swift */,
 				EE7CF139225FBBE000F6BCC7 /* StatusSectionCell.xib */,
+				EE7CF12D225FB42800F6BCC7 /* WorkOrderCell.swift */,
+				EE7CF12E225FB42800F6BCC7 /* WorkOrderCell.xib */,
+				EEE02801222EFB63006E22CC /* WorkOrderDetailViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 				EE7CF132225FB45900F6BCC7 /* UITableView+Extensions.swift */,
 				EE7CF134225FB47600F6BCC7 /* ReusableView.swift */,
 				EE7CF136225FB57D00F6BCC7 /* UIColor+Extensions.swift */,
+				EE7CF140225FD2EA00F6BCC7 /* DateHelpers.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 				TargetAttributes = {
 					EEE027E8222EF6D8006E22CC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -286,8 +296,11 @@
 				EE7CF12C225FB1D300F6BCC7 /* Status.swift in Sources */,
 				EE03D084225F9166002B914B /* User.swift in Sources */,
 				EEE027FF222EF7B2006E22CC /* WorkOrdersViewController.swift in Sources */,
+				EE7CF141225FD2EA00F6BCC7 /* DateHelpers.swift in Sources */,
 				EE7CF12F225FB42800F6BCC7 /* WorkOrderCell.swift in Sources */,
 				EE7CF137225FB57D00F6BCC7 /* UIColor+Extensions.swift in Sources */,
+				EE7CF13F225FD01F00F6BCC7 /* StatusSectionsDataSource.swift in Sources */,
+				EE7CF13D225FCEED00F6BCC7 /* WorkOrderType.swift in Sources */,
 				EEE027ED222EF6D8006E22CC /* AppDelegate.swift in Sources */,
 				EEE02802222EFB63006E22CC /* WorkOrderDetailViewController.swift in Sources */,
 			);
@@ -445,7 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.octanner.Soda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -464,7 +477,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.octanner.Soda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
