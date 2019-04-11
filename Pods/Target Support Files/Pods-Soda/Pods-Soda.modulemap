@@ -1,0 +1,6 @@
+framework module Pods_Soda {
+  umbrella header "Pods-Soda-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2832E080BAE20B52EA061F37 /* Pods_Soda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D02EA7E178BB1C6880C35D4 /* Pods_Soda.framework */; };
+		EE03D084225F9166002B914B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03D083225F9166002B914B /* User.swift */; };
+		EE03D086225F958A002B914B /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03D085225F958A002B914B /* WorkOrder.swift */; };
+		EE03D088225F9DC1002B914B /* WorkOrderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE03D087225F9DC1002B914B /* WorkOrderRouter.swift */; };
+		EEE027ED222EF6D8006E22CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE027EC222EF6D8006E22CC /* AppDelegate.swift */; };
+		EEE027F2222EF6D8006E22CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F0222EF6D8006E22CC /* Main.storyboard */; };
+		EEE027F4222EF6D9006E22CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F3222EF6D9006E22CC /* Assets.xcassets */; };
+		EEE027F7222EF6D9006E22CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F5222EF6D9006E22CC /* LaunchScreen.storyboard */; };
+		EEE027FF222EF7B2006E22CC /* WorkOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE027FE222EF7B2006E22CC /* WorkOrdersViewController.swift */; };
+		EEE02802222EFB63006E22CC /* WorkOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE02801222EFB63006E22CC /* WorkOrderDetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28F706AE9A9D2A302D15AB28 /* Pods-Soda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soda.debug.xcconfig"; path = "Target Support Files/Pods-Soda/Pods-Soda.debug.xcconfig"; sourceTree = "<group>"; };
+		6AB29649C46662AB7EC1DE2F /* Pods-Soda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soda.release.xcconfig"; path = "Target Support Files/Pods-Soda/Pods-Soda.release.xcconfig"; sourceTree = "<group>"; };
+		6D02EA7E178BB1C6880C35D4 /* Pods_Soda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE03D083225F9166002B914B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EE03D085225F958A002B914B /* WorkOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
+		EE03D087225F9DC1002B914B /* WorkOrderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderRouter.swift; sourceTree = "<group>"; };
+		EEE027E9222EF6D8006E22CC /* Soda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE027EC222EF6D8006E22CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEE027F1222EF6D8006E22CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEE027F3222EF6D9006E22CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEE027F6222EF6D9006E22CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EEE027F8222EF6D9006E22CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE027FE222EF7B2006E22CC /* WorkOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrdersViewController.swift; sourceTree = "<group>"; };
+		EEE02801222EFB63006E22CC /* WorkOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderDetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEE027E6222EF6D8006E22CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2832E080BAE20B52EA061F37 /* Pods_Soda.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		603715846747471E77425E7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28F706AE9A9D2A302D15AB28 /* Pods-Soda.debug.xcconfig */,
+				6AB29649C46662AB7EC1DE2F /* Pods-Soda.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6D655A6056FEC10EB1D00822 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D02EA7E178BB1C6880C35D4 /* Pods_Soda.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE03D089225FA29A002B914B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE03D083225F9166002B914B /* User.swift */,
+				EE03D085225F958A002B914B /* WorkOrder.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EE03D08A225FA2A3002B914B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EE03D087225F9DC1002B914B /* WorkOrderRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EE03D08B225FA2B3002B914B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EEE027F0222EF6D8006E22CC /* Main.storyboard */,
+				EEE027FE222EF7B2006E22CC /* WorkOrdersViewController.swift */,
+				EEE02801222EFB63006E22CC /* WorkOrderDetailViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EEE027E0222EF6D8006E22CC = {
+			isa = PBXGroup;
+			children = (
+				EEE027EB222EF6D8006E22CC /* Soda */,
+				EEE027EA222EF6D8006E22CC /* Products */,
+				603715846747471E77425E7E /* Pods */,
+				6D655A6056FEC10EB1D00822 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EEE027EA222EF6D8006E22CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE027E9222EF6D8006E22CC /* Soda.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE027EB222EF6D8006E22CC /* Soda */ = {
+			isa = PBXGroup;
+			children = (
+				EEE027EC222EF6D8006E22CC /* AppDelegate.swift */,
+				EE03D08B225FA2B3002B914B /* UI */,
+				EE03D089225FA29A002B914B /* Data */,
+				EE03D08A225FA2A3002B914B /* Network */,
+				EEE027F3222EF6D9006E22CC /* Assets.xcassets */,
+				EEE027F5222EF6D9006E22CC /* LaunchScreen.storyboard */,
+				EEE027F8222EF6D9006E22CC /* Info.plist */,
+			);
+			path = Soda;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEE027E8222EF6D8006E22CC /* Soda */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE027FB222EF6D9006E22CC /* Build configuration list for PBXNativeTarget "Soda" */;
+			buildPhases = (
+				FB0CB3DD4BFC54563F203483 /* [CP] Check Pods Manifest.lock */,
+				EEE027E5222EF6D8006E22CC /* Sources */,
+				EEE027E6222EF6D8006E22CC /* Frameworks */,
+				EEE027E7222EF6D8006E22CC /* Resources */,
+				3CEED7340D7B4D61E5E66163 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Soda;
+			productName = Soda;
+			productReference = EEE027E9222EF6D8006E22CC /* Soda.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEE027E1222EF6D8006E22CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "O.C. Tanner";
+				TargetAttributes = {
+					EEE027E8222EF6D8006E22CC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = EEE027E4222EF6D8006E22CC /* Build configuration list for PBXProject "Soda" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEE027E0222EF6D8006E22CC;
+			productRefGroup = EEE027EA222EF6D8006E22CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEE027E8222EF6D8006E22CC /* Soda */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEE027E7222EF6D8006E22CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE027F7222EF6D9006E22CC /* LaunchScreen.storyboard in Resources */,
+				EEE027F4222EF6D9006E22CC /* Assets.xcassets in Resources */,
+				EEE027F2222EF6D8006E22CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CEED7340D7B4D61E5E66163 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soda/Pods-Soda-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Soda/Pods-Soda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB0CB3DD4BFC54563F203483 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Soda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEE027E5222EF6D8006E22CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE03D086225F958A002B914B /* WorkOrder.swift in Sources */,
+				EE03D088225F9DC1002B914B /* WorkOrderRouter.swift in Sources */,
+				EE03D084225F9166002B914B /* User.swift in Sources */,
+				EEE027FF222EF7B2006E22CC /* WorkOrdersViewController.swift in Sources */,
+				EEE027ED222EF6D8006E22CC /* AppDelegate.swift in Sources */,
+				EEE02802222EFB63006E22CC /* WorkOrderDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EEE027F0222EF6D8006E22CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEE027F1222EF6D8006E22CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EEE027F5222EF6D9006E22CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEE027F6222EF6D9006E22CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEE027F9222EF6D9006E22CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEE027FA222EF6D9006E22CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEE027FC222EF6D9006E22CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28F706AE9A9D2A302D15AB28 /* Pods-Soda.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P25YZ8RHNL;
+				INFOPLIST_FILE = Soda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.octanner.Soda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		EEE027FD222EF6D9006E22CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB29649C46662AB7EC1DE2F /* Pods-Soda.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P25YZ8RHNL;
+				INFOPLIST_FILE = Soda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.octanner.Soda;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEE027E4222EF6D8006E22CC /* Build configuration list for PBXProject "Soda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE027F9222EF6D9006E22CC /* Debug */,
+				EEE027FA222EF6D9006E22CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE027FB222EF6D9006E22CC /* Build configuration list for PBXNativeTarget "Soda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE027FC222EF6D9006E22CC /* Debug */,
+				EEE027FD222EF6D9006E22CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEE027E1222EF6D8006E22CC /* Project object */;
+}
