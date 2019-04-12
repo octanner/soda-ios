@@ -11,18 +11,29 @@ import UIKit
 class StatusSectionsDataSource: NSObject {
 
     let sections: [Status.Name] = [.estimate, .toBeOrdered, .design, .casting, .assembly, .receiving, .customerService]
+    var workOrders = [WorkOrder]()
+    
+    func workOrders(for section: Status.Name) -> [WorkOrder] {
+        return workOrders.filter { $0.status.name == section }
+    }
     
 }
 
 extension StatusSectionsDataSource: UICollectionViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as StatusSectionCell
-        
+        let section = sections[indexPath.section]
+        let orders = workOrders(for: sections[indexPath.section])
+        cell.config(with: section, workOrders: orders)
         return cell
     }
     

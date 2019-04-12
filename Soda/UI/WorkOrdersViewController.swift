@@ -14,21 +14,44 @@ class WorkOrdersViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet var dataSource: StatusSectionsDataSource!
+    @IBOutlet weak var displayButton: UIBarButtonItem!
     
     var core = App.sharedCore
+    
     
     // MARK: - Overrides
     
     override func viewDidLoad() {
         collectionView.register(StatusSectionCell.nib(), forCellWithReuseIdentifier: StatusSectionCell.reuseIdentifier)
-        updateCollectionViewCellSize(for: collectionView.bounds.size)
-        core.fire(command: FetchWorkOrders(for: 28, active: true))
+        core.fire(command: FetchWorkOrders(for: 28, orderState: .active))
+        title = "Work Orders"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        core.add(subscriber: self)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        core.remove(subscriber: self)
     }
     
     
     // MARK: - Actions
     
     @IBAction func displayButtonTapped(_ sender: Any) {
+        animateDetail()
+    }
+    
+}
+
+
+// MARK: - Private
+
+private extension WorkOrdersViewController {
+    
+    func animateDetail() {
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: {
             if self.splitViewController?.preferredPrimaryColumnWidthFraction == 0.75 {
                 self.splitViewController?.preferredPrimaryColumnWidthFraction = 1.0
@@ -41,18 +64,17 @@ class WorkOrdersViewController: UIViewController {
 }
 
 
-// MARK: - Private
+// MARK: - FlowLayout Delegate
 
-private extension WorkOrdersViewController {
+extension WorkOrdersViewController: UICollectionViewDelegateFlowLayout {
     
-    func updateCollectionViewCellSize(for size: CGSize) {
-        guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-            return
-        }
-        layout.itemSize = CGSize(width: size.width * 0.25, height: size.height * 0.95)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 300, height: collectionView.frame.height)
     }
     
+    
 }
+
 
 
 // MARK: - Subscriber
@@ -60,7 +82,12 @@ private extension WorkOrdersViewController {
 extension WorkOrdersViewController: Subscriber {
     
     func update(with state: AppState) {
-        
+        dataSource.workOrders = state.workOrderState.workOrders
+        collectionView.reloadData()
+        displayButton.isEnabled = state.workOrderState.selectedWorkOrder != nil
+        if state.workOrderState.shouldShowDetail {
+            animateDetail()
+        }
     }
     
 }

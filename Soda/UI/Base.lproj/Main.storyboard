@@ -10,29 +10,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Work Orders View Controller-->
+        <!--Work Orders-->
         <scene sceneID="HTF-zv-dmR">
             <objects>
-                <viewController id="BFr-5D-Ina" customClass="WorkOrdersViewController" customModule="Soda" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Work Orders" id="BFr-5D-Ina" customClass="WorkOrdersViewController" customModule="Soda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="loV-o5-8qe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3es-o0-9go">
-                                <rect key="frame" x="20" y="94" width="280" height="1080"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="6yR-jW-MdM">
-                                    <size key="itemSize" width="50" height="50"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3es-o0-9go">
+                                <rect key="frame" x="0.0" y="74" width="320" height="1100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6yR-jW-MdM">
+                                    <size key="itemSize" width="296" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lDy-9R-Jd5">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="12" y="0.0" width="296" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="296" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
@@ -43,12 +43,12 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="odr-MW-tcd" firstAttribute="trailing" secondItem="3es-o0-9go" secondAttribute="trailing" constant="20" id="PfT-om-Vlc"/>
-                            <constraint firstItem="3es-o0-9go" firstAttribute="top" secondItem="odr-MW-tcd" secondAttribute="top" constant="20" id="WTd-4Y-9cd"/>
+                            <constraint firstItem="odr-MW-tcd" firstAttribute="trailing" secondItem="3es-o0-9go" secondAttribute="trailing" id="PfT-om-Vlc"/>
+                            <constraint firstItem="3es-o0-9go" firstAttribute="top" secondItem="odr-MW-tcd" secondAttribute="top" id="WTd-4Y-9cd"/>
                             <constraint firstItem="3es-o0-9go" firstAttribute="bottom" secondItem="odr-MW-tcd" secondAttribute="bottom" id="m09-v7-yXA"/>
-                            <constraint firstItem="3es-o0-9go" firstAttribute="leading" secondItem="odr-MW-tcd" secondAttribute="leading" constant="20" id="pjZ-S1-sIP"/>
+                            <constraint firstItem="3es-o0-9go" firstAttribute="leading" secondItem="odr-MW-tcd" secondAttribute="leading" id="pjZ-S1-sIP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="odr-MW-tcd"/>
                     </view>
@@ -62,6 +62,7 @@
                     <connections>
                         <outlet property="collectionView" destination="3es-o0-9go" id="Olx-Fk-o6G"/>
                         <outlet property="dataSource" destination="Ths-sE-hYC" id="I6Y-Uf-ynG"/>
+                        <outlet property="displayButton" destination="btg-TW-zKW" id="Dgi-wt-qLP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeA-Zb-4qL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +105,7 @@
         <!--Custom Split View Controller-->
         <scene sceneID="Xdf-aF-FAT">
             <objects>
-                <splitViewController preferredPrimaryColumnWidthFraction="0.75" id="hHq-jz-c86" customClass="CustomSplitViewController" customModule="Soda" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController preferredPrimaryColumnWidthFraction="1" id="hHq-jz-c86" customClass="CustomSplitViewController" customModule="Soda" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="z8C-Lj-ngX" kind="relationship" relationship="masterViewController" id="RLY-N4-4FI"/>
                         <segue destination="H7F-do-PIV" kind="relationship" relationship="detailViewController" id="dYB-ID-K1e"/>

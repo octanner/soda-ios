@@ -49,3 +49,5 @@ struct AuthenticationSucceeded: Event { }
 struct LoggedIn: Event { }
 
 struct LoggedOut: Event { }
+
+struct DisplayedDetail: Event { }
