@@ -11,6 +11,8 @@ import Foundation
 struct Keys {
     
     static let active = "active"
+    static let inProgress = "in_progress"
+    static let statusId = "status_id"
     static let userId = "user_id"
     
 }

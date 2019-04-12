@@ -17,7 +17,7 @@ extension Router {
     
     enum WorkOrder: URLRequestConvertible {
         // Fetches all work orders
-        case getWorkOrders(Bool, Int?)
+        case getWorkOrders(Int?, OrderState, Status?)
         
         var method: HTTPMethod {
             switch self {
@@ -41,13 +41,21 @@ extension Router {
             urlRequest.httpMethod = method.rawValue
             
             switch self {
-            case let .getWorkOrders(active, userId):
+            case let .getWorkOrders(userId, orderState, status):
                 var params = Parameters()
-                if active  {
-                    params[Keys.active] = active
+                switch orderState {
+                case .active:
+                    params[Keys.active] = true
+                case .inProgress:
+                    params[Keys.inProgress] = true
+                case .all:
+                    break
                 }
                 if let userId = userId {
                     params[Keys.userId] = userId
+                }
+                if let status = status {
+                    params[Keys.statusId] = status.id
                 }
                 if !params.isEmpty {
                     urlRequest = try JSONEncoding.default.encode(urlRequest, with: params)
