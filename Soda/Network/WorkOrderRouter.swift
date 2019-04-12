@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum Router {
-    static let baseURLString = "http://soda-api.dev.octanner.net"
+    static let baseURLString = "https://development-gateway.api.octanner.net/css/soda/"
 }
 
 extension Router {

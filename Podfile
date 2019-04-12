@@ -6,6 +6,6 @@ target 'Soda' do
   use_frameworks!
 
   # Pods for Soda
-pod 'Alamofire', '~> 5.0.0-beta.3'
+pod 'Alamofire', '~> 5.0.0-beta.4'
 
 end

@@ -16,12 +16,13 @@ struct WorkOrder {
     let customerName: String
     let location: String
     let ascRepairStation: String
-    let dueDate: String
-    let createdAt: String
+    let dueDate: Date?
+    let createdAt: Date?
     let status: Status
     let assignedUser: User
     let salesUser: User
     let workOrderType: WorkOrderType
+    let notes: [Note]
     
 }
 
@@ -39,6 +40,7 @@ extension WorkOrder: Codable {
         case assignedUser = "assigned_user"
         case salesUser = "sales_user"
         case workOrderType = "work_order_type"
+        case notes
     }
     
     init(from decoder: Decoder) throws {
@@ -48,12 +50,15 @@ extension WorkOrder: Codable {
         customerName = try values.decode(String.self, forKey: .customerName)
         location = try values.decode(String.self, forKey: .location)
         ascRepairStation = try values.decode(String.self, forKey: .ascRepairStation)
-        dueDate = try values.decode(String.self, forKey: .dueDate)
-        createdAt = try values.decode(String.self, forKey: .createdAt)
+        let dueDateString = try values.decode(String.self, forKey: .dueDate)
+        dueDate = dueDateString.date()
+        let createdAtString = try values.decode(String.self, forKey: .createdAt)
+        createdAt = createdAtString.date()
         status = try values.decode(Status.self, forKey: .status)
         assignedUser = try values.decode(User.self, forKey: .assignedUser)
         salesUser = try values.decode(User.self, forKey: .salesUser)
         workOrderType = try values.decode(WorkOrderType.self, forKey: .workOrderType)
+        notes = try values.decode([Note].self, forKey: .notes)
     }
     
 }
