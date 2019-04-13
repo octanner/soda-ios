@@ -14,17 +14,25 @@ class WorkOrdersViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet var dataSource: StatusSectionsDataSource!
-    @IBOutlet weak var displayButton: UIBarButtonItem!
     
     var core = App.sharedCore
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
     
     
     // MARK: - Overrides
     
     override func viewDidLoad() {
         collectionView.register(StatusSectionCell.nib(), forCellWithReuseIdentifier: StatusSectionCell.reuseIdentifier)
-        core.fire(command: FetchWorkOrders(for: 28, orderState: .active))
+        core.fire(command: FetchWorkOrders(for: 28, orderState: .active, status: nil, completion: { workOrders in
+            DispatchQueue.main.async {
+                self.dataSource.workOrders = workOrders
+                self.collectionView.reloadData()
+            }
+        }))
         title = "Work Orders"
+        navigationItem.leftBarButtonItem?.customView = activityIndicator
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,12 +60,22 @@ class WorkOrdersViewController: UIViewController {
 private extension WorkOrdersViewController {
     
     func animateDetail() {
+        if self.splitViewController?.preferredPrimaryColumnWidthFraction == 0.75 {
+            hideDetail()
+        } else {
+            showDetail()
+        }
+    }
+    
+    func showDetail() {
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: {
-            if self.splitViewController?.preferredPrimaryColumnWidthFraction == 0.75 {
-                self.splitViewController?.preferredPrimaryColumnWidthFraction = 1.0
-            } else {
-                self.splitViewController?.preferredPrimaryColumnWidthFraction = 0.75
-            }
+            self.splitViewController?.preferredPrimaryColumnWidthFraction = 0.75
+        }, completion: nil)
+    }
+    
+    func hideDetail() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: {
+            self.splitViewController?.preferredPrimaryColumnWidthFraction = 1.0
         }, completion: nil)
     }
     
@@ -83,10 +101,13 @@ extension WorkOrdersViewController: Subscriber {
     
     func update(with state: AppState) {
         dataSource.workOrders = state.workOrderState.workOrders
-        collectionView.reloadData()
-        displayButton.isEnabled = state.workOrderState.selectedWorkOrder != nil
+        if state.workOrderState.workOrdersLoaded {
+            activityIndicator.stopAnimating()
+        }
         if state.workOrderState.shouldShowDetail {
-            animateDetail()
+            showDetail()
+        } else {
+            hideDetail()
         }
     }
     

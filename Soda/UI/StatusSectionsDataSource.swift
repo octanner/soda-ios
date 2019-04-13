@@ -13,8 +13,11 @@ class StatusSectionsDataSource: NSObject {
     let sections: [Status.Name] = [.estimate, .toBeOrdered, .design, .casting, .assembly, .receiving, .customerService]
     var workOrders = [WorkOrder]()
     
+    
     func workOrders(for section: Status.Name) -> [WorkOrder] {
-        return workOrders.filter { $0.status.name == section }
+        return workOrders.filter {
+            $0.status.name.rawValue == section.rawValue
+        }.sortedByDate(ascending: true)
     }
     
 }

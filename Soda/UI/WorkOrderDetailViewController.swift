@@ -10,5 +10,28 @@ import UIKit
 
 class WorkOrderDetailViewController: UIViewController {
 
+    var core = App.sharedCore
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        core.add(subscriber: self)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        core.remove(subscriber: self)
+    }
+}
+
+
+// MARK: - Subscriber
+
+extension WorkOrderDetailViewController: Subscriber {
+    
+    func update(with state: AppState) {
+        if let workOrderNumber = state.workOrderState.selectedWorkOrder?.workOrderNumber {
+            title = "\(workOrderNumber)"
+        }
+    }
     
 }

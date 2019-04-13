@@ -52,17 +52,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="odr-MW-tcd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YD5-3O-Rsl">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="sidebar" id="btg-TW-zKW">
-                            <connections>
-                                <action selector="displayButtonTapped:" destination="BFr-5D-Ina" id="3Qc-vb-qTj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="YD5-3O-Rsl"/>
                     <connections>
                         <outlet property="collectionView" destination="3es-o0-9go" id="Olx-Fk-o6G"/>
                         <outlet property="dataSource" destination="Ths-sE-hYC" id="I6Y-Uf-ynG"/>
-                        <outlet property="displayButton" destination="btg-TW-zKW" id="Dgi-wt-qLP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeA-Zb-4qL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -77,7 +70,19 @@
                     <view key="view" contentMode="scaleToFill" id="VBY-WY-OIc">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.066666666669999999" green="0.58039215690000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-a0-KIZ">
+                                <rect key="frame" x="0.0" y="74" width="834" height="1120"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OLq-a0-KIZ" firstAttribute="leading" secondItem="ad4-PP-mwh" secondAttribute="leading" id="FGZ-Sf-yBM"/>
+                            <constraint firstItem="OLq-a0-KIZ" firstAttribute="trailing" secondItem="ad4-PP-mwh" secondAttribute="trailing" id="HO5-WO-027"/>
+                            <constraint firstItem="OLq-a0-KIZ" firstAttribute="top" secondItem="ad4-PP-mwh" secondAttribute="top" id="csq-Wq-THK"/>
+                            <constraint firstAttribute="bottom" secondItem="OLq-a0-KIZ" secondAttribute="bottom" id="sxf-oe-n4p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ad4-PP-mwh"/>
                     </view>
                     <navigationItem key="navigationItem" id="LqN-EH-cD6"/>
@@ -134,7 +139,4 @@
             <point key="canvasLocation" x="558.99280575539569" y="1801.5075376884422"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="sidebar" width="20" height="20"/>
-    </resources>
 </document>

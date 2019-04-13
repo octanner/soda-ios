@@ -28,14 +28,16 @@
 		EE7CF14B225FE07200F6BCC7 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF14A225FE07200F6BCC7 /* Keys.swift */; };
 		EE7CF14D226011DA00F6BCC7 /* CustomSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF14C226011DA00F6BCC7 /* CustomSplitViewController.swift */; };
 		EE7CF14F2260250D00F6BCC7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF14E2260250D00F6BCC7 /* Note.swift */; };
-		EE7CF1512260265500F6BCC7 /* FetchActiveWorkOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF1502260265500F6BCC7 /* FetchActiveWorkOrders.swift */; };
+		EE7CF1512260265500F6BCC7 /* FetchWorkOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF1502260265500F6BCC7 /* FetchWorkOrders.swift */; };
 		EE7CF1532260304C00F6BCC7 /* GenericEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF1522260304C00F6BCC7 /* GenericEvents.swift */; };
+		EE7CF155226112BC00F6BCC7 /* SortByDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CF154226112BC00F6BCC7 /* SortByDate.swift */; };
 		EEE027ED222EF6D8006E22CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE027EC222EF6D8006E22CC /* AppDelegate.swift */; };
 		EEE027F2222EF6D8006E22CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F0222EF6D8006E22CC /* Main.storyboard */; };
 		EEE027F4222EF6D9006E22CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F3222EF6D9006E22CC /* Assets.xcassets */; };
 		EEE027F7222EF6D9006E22CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE027F5222EF6D9006E22CC /* LaunchScreen.storyboard */; };
 		EEE027FF222EF7B2006E22CC /* WorkOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE027FE222EF7B2006E22CC /* WorkOrdersViewController.swift */; };
 		EEE02802222EFB63006E22CC /* WorkOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE02801222EFB63006E22CC /* WorkOrderDetailViewController.swift */; };
+		EEEA7412226130750093C548 /* UpdateWorkOrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEA7411226130750093C548 /* UpdateWorkOrderStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,8 +64,9 @@
 		EE7CF14A225FE07200F6BCC7 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EE7CF14C226011DA00F6BCC7 /* CustomSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitViewController.swift; sourceTree = "<group>"; };
 		EE7CF14E2260250D00F6BCC7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		EE7CF1502260265500F6BCC7 /* FetchActiveWorkOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchActiveWorkOrders.swift; sourceTree = "<group>"; };
+		EE7CF1502260265500F6BCC7 /* FetchWorkOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWorkOrders.swift; sourceTree = "<group>"; };
 		EE7CF1522260304C00F6BCC7 /* GenericEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericEvents.swift; sourceTree = "<group>"; };
+		EE7CF154226112BC00F6BCC7 /* SortByDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByDate.swift; sourceTree = "<group>"; };
 		EEE027E9222EF6D8006E22CC /* Soda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE027EC222EF6D8006E22CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE027F1222EF6D8006E22CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		EEE027F8222EF6D9006E22CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE027FE222EF7B2006E22CC /* WorkOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrdersViewController.swift; sourceTree = "<group>"; };
 		EEE02801222EFB63006E22CC /* WorkOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOrderDetailViewController.swift; sourceTree = "<group>"; };
+		EEEA7411226130750093C548 /* UpdateWorkOrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateWorkOrderStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				EE7CF136225FB57D00F6BCC7 /* UIColor+Extensions.swift */,
 				EE7CF140225FD2EA00F6BCC7 /* DateHelpers.swift */,
 				EE7CF142225FDCAC00F6BCC7 /* Reactor.swift */,
+				EE7CF154226112BC00F6BCC7 /* SortByDate.swift */,
 				EE7CF14A225FE07200F6BCC7 /* Keys.swift */,
 			);
 			path = Infrastructure;
@@ -164,7 +169,8 @@
 		EE7CF149225FDEE800F6BCC7 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
-				EE7CF1502260265500F6BCC7 /* FetchActiveWorkOrders.swift */,
+				EE7CF1502260265500F6BCC7 /* FetchWorkOrders.swift */,
+				EEEA7411226130750093C548 /* UpdateWorkOrderStatus.swift */,
 				EE7CF1522260304C00F6BCC7 /* GenericEvents.swift */,
 			);
 			path = Commands;
@@ -328,10 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE7CF1512260265500F6BCC7 /* FetchActiveWorkOrders.swift in Sources */,
+				EE7CF1512260265500F6BCC7 /* FetchWorkOrders.swift in Sources */,
 				EE7CF133225FB45900F6BCC7 /* UITableView+Extensions.swift in Sources */,
 				EE7CF135225FB47600F6BCC7 /* ReusableView.swift in Sources */,
 				EE7CF14F2260250D00F6BCC7 /* Note.swift in Sources */,
+				EEEA7412226130750093C548 /* UpdateWorkOrderStatus.swift in Sources */,
+				EE7CF155226112BC00F6BCC7 /* SortByDate.swift in Sources */,
 				EE03D086225F958A002B914B /* WorkOrder.swift in Sources */,
 				EE7CF1532260304C00F6BCC7 /* GenericEvents.swift in Sources */,
 				EE7CF13A225FBBE000F6BCC7 /* StatusSectionCell.swift in Sources */,

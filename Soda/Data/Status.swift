@@ -16,7 +16,7 @@ struct Status: Codable {
     enum Name: String, Codable {
         case estimate = "Estimate/Customer Approval"
         case toBeOrdered = "Items To Be Ordered"
-        case design = "CAD/Desgin"
+        case design = "CAD/Design"
         case casting = "Casting"
         case assembly = "Assembly/Setting"
         case receiving = "Receiving/Appraisal"

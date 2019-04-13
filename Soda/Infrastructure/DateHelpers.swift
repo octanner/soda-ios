@@ -21,7 +21,7 @@ extension Date {
     
     func monthDayYearString() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM dd, yyyy"
+        formatter.dateFormat = "MMM d, yyyy"
         return formatter.string(from: self)
     }
     
@@ -34,6 +34,11 @@ extension Date {
         } else {
             return .safe
         }
+    }
+    
+    /// E.g. "1937-11-23"
+    public var iso8601DateString: String {
+        return Date.ISO8601YearMonthDayFormatter.string(from: self)
     }
     
 }

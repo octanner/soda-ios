@@ -51,3 +51,5 @@ struct LoggedIn: Event { }
 struct LoggedOut: Event { }
 
 struct DisplayedDetail: Event { }
+
+struct Refreshed: Event { }

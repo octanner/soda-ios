@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum Router {
-    static let baseURLString = "https://development-gateway.api.octanner.net/css/soda/"
+    static let baseURLString = "http://soda-api.dev.octanner.net/css/soda"
 }
 
 extension Router {
@@ -29,38 +29,37 @@ extension Router {
         var path: String {
             switch self {
             case .getWorkOrders:
-                return "/v1/work_orders"
+                return "https://development-gateway.api.octanner.net/css/soda/v1/work_orders?active=true&assigned_user_id=28"
                 
             }
         }
         
         func asURLRequest() throws -> URLRequest {
-            var url = try Router.baseURLString.asURL()
-            url = url.appendingPathComponent(path)
+            let url = try path.asURL()
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = method.rawValue
             
-            switch self {
-            case let .getWorkOrders(userId, orderState, status):
-                var params = Parameters()
-                switch orderState {
-                case .active:
-                    params[Keys.active] = true
-                case .inProgress:
-                    params[Keys.inProgress] = true
-                case .all:
-                    break
-                }
-                if let userId = userId {
-                    params[Keys.userId] = userId
-                }
-                if let status = status {
-                    params[Keys.statusId] = status.id
-                }
-                if !params.isEmpty {
-                    urlRequest = try JSONEncoding.default.encode(urlRequest, with: params)
-                }
-            }
+//            switch self {
+//            case let .getWorkOrders(userId, orderState, status):
+//                var params = Parameters()
+//                switch orderState {
+//                case .active:
+//                    params[Keys.active] = true
+//                case .inProgress:
+//                    params[Keys.inProgress] = true
+//                case .all:
+//                    break
+//                }
+//                if let userId = userId {
+//                    params[Keys.userId] = userId
+//                }
+//                if let status = status {
+//                    params[Keys.statusId] = status.id
+//                }
+//                if !params.isEmpty {
+//                    urlRequest = try JSONEncoding.default.encode(urlRequest, with: params)
+//                }
+//            }
             return urlRequest
         }
         

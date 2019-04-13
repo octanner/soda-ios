@@ -15,24 +15,44 @@ class WorkOrderCell: UICollectionViewCell, ReusableView {
     @IBOutlet weak var customerNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var coloredView: UIView!
+    @IBOutlet weak var overlayView: UIView!
+    
+    var core = App.sharedCore
+    var workOrder: WorkOrder?
+    
+    var tapped: Bool = false {
+        didSet {
+           overlayView.alpha = tapped ? 0.2 : 0.0
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = 8
+        core.add(subscriber: self)
+        layer.cornerRadius = 4
         clipsToBounds = true
+        layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     
     func config(with workOrder: WorkOrder) {
+        self.workOrder = workOrder
         orderNumberLabel.text = "\(workOrder.workOrderNumber)"
-        dueDateLabel.text = workOrder.dueDate?.monthDayYearString()
+        dueDateLabel.text = workOrder.dueDate.monthDayYearString()
         coloredView.backgroundColor = workOrder.workOrderType.name.color
         customerNameLabel.text = workOrder.customerName
         locationLabel.text = workOrder.location
-        if let dueDate = workOrder.dueDate {
-            dueDateLabel.textColor = dueDate.daysUntilColor()
-        } else {
-            dueDateLabel.textColor = .darkText
-        }
+        dueDateLabel.textColor = workOrder.dueDate.daysUntilColor()
+    }
+    
+}
+
+
+// MARK: - Subscriber
+
+extension WorkOrderCell: Subscriber {
+    
+    func update(with state: AppState) {
+        tapped = workOrder == state.workOrderState.selectedWorkOrder
     }
     
 }

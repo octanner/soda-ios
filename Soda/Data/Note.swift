@@ -13,8 +13,8 @@ struct Note {
     let id: Int
     let workOrderId: Int
     let text: String
-    let ascLineNumber: Int
-    let createdAt: Date?
+    let ascLineNumber: Int?
+    let createdAt: String
     
 }
 
@@ -34,9 +34,8 @@ extension Note: Codable {
         id = try values.decode(Int.self, forKey: .id)
         workOrderId = try values.decode(Int.self, forKey: .workOrderId)
         text = try values.decode(String.self, forKey: .text)
-        ascLineNumber = try values.decode(Int.self, forKey: .ascLineNumber)
-        let createdAtString = try values.decode(String.self, forKey: .createdAt)
-        createdAt = createdAtString.date()
+        ascLineNumber = try? values.decode(Int.self, forKey: .ascLineNumber)
+        createdAt = try values.decode(String.self, forKey: .createdAt)
     }
     
 }
